@@ -1,14 +1,29 @@
 import logo from "../assets/logo.svg";
 import heroBack from "../assets/heroImg.jpg";
-import catalogImg1 from '../assets/catalogImg1.jpg';
-import catalogImg2 from '../assets/catalogImg2.jpg';
-import catalogImg3 from '../assets/catalogImg3.jpg';
-import catalogImg4 from '../assets/catalogImg4.jpg';
-import catalogImg5 from '../assets/catalogImg5.jpg';
-import catalogImg6 from '../assets/catalogImg6.jpg';
-import catalogImg7 from '../assets/catalogImg7.jpg';
+import catalogImg1 from "../assets/catalogImg1.jpg";
+import catalogImg2 from "../assets/catalogImg2.jpg";
+import catalogImg3 from "../assets/catalogImg3.jpg";
+import catalogImg4 from "../assets/catalogImg4.jpg";
+import catalogImg5 from "../assets/catalogImg5.jpg";
+import catalogImg6 from "../assets/catalogImg6.jpg";
+import catalogImg7 from "../assets/catalogImg7.jpg";
+import treeImg from "../assets/treeImg.jpg";
+import copmImg from "../assets/copmImg.jpg";
+import copmImg1 from "../assets/gruop1.jpg";
+import copmImg2 from "../assets/gruop2.jpg";
+import copmImg3 from "../assets/gruop3.jpg";
+import copmImg4 from "../assets/gruop4.jpg";
+import partners1 from "../assets/partners1.jpg";
+import partners2 from "../assets/partners2.jpg";
+import partners3 from "../assets/partners3.jpg";
+import partners4 from "../assets/partners4.jpg";
+import partners5 from "../assets/partners5.jpg";
+import partners6 from "../assets/partners6.jpg";
+import partners7 from "../assets/partners7.jpg";
+import partners8 from "../assets/partners8.jpg";
+import partners9 from "../assets/partners9.jpg";
 
-import { Footer, Header } from "antd/es/layout/layout";
+import { Header } from "antd/es/layout/layout";
 import React from "react";
 import {
   FacebookOutlined,
@@ -296,7 +311,7 @@ const MyPage = () => {
           </div>
           <div className="overflow-hidden">
             <img
-              src="../../public/treeImg.jpg"
+              src={treeImg}
               alt="img"
               className="h-[350px] hover:scale-105 duration-300"
             />
@@ -309,7 +324,7 @@ const MyPage = () => {
         >
           <div className="w-[50%] max-sm:w-[100%] overflow-hidden">
             <img
-              src="../../public/copmImg.jpg"
+              src={copmImg}
               alt="img"
               className="w-full h-full hover:scale-105 duration-300"
             />
@@ -330,28 +345,28 @@ const MyPage = () => {
             <div className="flex gap-2 max-sm:justify-center mt-3">
               <div className="overflow-hidden">
                 <img
-                  src="../../public/gruop1.jpg"
+                  src={copmImg1}
                   alt="img"
                   className="hover:scale-105 duration-300"
                 />
               </div>
               <div className="overflow-hidden">
                 <img
-                  src="../../public/gruop2.jpg"
+                  src={copmImg2}
                   alt="img"
                   className="hover:scale-105 duration-300"
                 />
               </div>{" "}
               <div className="overflow-hidden">
                 <img
-                  src="../../public/gruop3.jpg"
+                  src={copmImg3}
                   alt="img"
                   className="hover:scale-105 duration-300"
                 />
               </div>{" "}
               <div className="overflow-hidden">
                 <img
-                  src="../../public/gruop4.jpg"
+                  src={copmImg4}
                   alt="img"
                   className="hover:scale-105 duration-300"
                 />
@@ -365,15 +380,15 @@ const MyPage = () => {
             наши поставщики
           </h2>
           <div className="flex justify-center flex-wrap gap-5 my-10">
-            <Image width={250} height={100} src="../../public/partners1.jpg" />
-            <Image width={250} height={100} src="../../public/partners2.jpg" />
-            <Image width={250} height={100} src="../../public/partners3.jpg" />
-            <Image width={250} height={100} src="../../public/partners4.jpg" />
-            <Image width={250} height={100} src="../../public/partners5.jpg" />
-            <Image width={250} height={100} src="../../public/partners6.jpg" />
-            <Image width={250} height={100} src="../../public/partners7.jpg" />
-            <Image width={250} height={100} src="../../public/partners8.jpg" />
-            <Image width={250} height={100} src="../../public/partners9.jpg" />
+            <Image width={250} height={100} src={partners1} />
+            <Image width={250} height={100} src={partners2} />
+            <Image width={250} height={100} src={partners3} />
+            <Image width={250} height={100} src={partners4} />
+            <Image width={250} height={100} src={partners5} />
+            <Image width={250} height={100} src={partners6} />
+            <Image width={250} height={100} src={partners7} />
+            <Image width={250} height={100} src={partners8} />
+            <Image width={250} height={100} src={partners9} />
           </div>
         </div>
 
