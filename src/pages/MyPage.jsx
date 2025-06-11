@@ -1,3 +1,5 @@
+import logo from '../assets/logo.svg';
+
 import { Footer, Header } from "antd/es/layout/layout";
 import React from "react";
 import {
@@ -34,7 +36,7 @@ const MyPage = () => {
       >
         <div className="max-w-[1200px] mx-auto px-3">
           <nav className="h-[100px] flex justify-between items-center">
-            <img src="../../public/logo.svg" alt="logo" />
+            <img src={logo} alt="logo" />
             <ul className="flex gap-4 text-[14px] max-md:hidden">
               <a href="#services">
                 {" "}
@@ -355,15 +357,15 @@ const MyPage = () => {
             наши поставщики
           </h2>
           <div className="flex justify-center flex-wrap gap-5 my-10">
-            <Image width={250} height={100}  src="./partners1.jpg" />
-            <Image width={250} height={100}  src="./partners2.jpg" />
-            <Image width={250} height={100}  src="./partners3.jpg" />
-            <Image width={250} height={100}  src="./partners4.jpg" />
-            <Image width={250} height={100}  src="./partners5.jpg" />
-            <Image width={250} height={100}  src="./partners6.jpg" />
-            <Image width={250} height={100}  src="./partners7.jpg" />
-            <Image width={250} height={100}  src="./partners8.jpg" />
-            <Image width={250} height={100}  src="./partners9.jpg" />
+            <Image width={250} height={100}  src="../../public/partners1.jpg" />
+            <Image width={250} height={100}  src="../../public/partners2.jpg" />
+            <Image width={250} height={100}  src="../../public/partners3.jpg" />
+            <Image width={250} height={100}  src="../../public/partners4.jpg" />
+            <Image width={250} height={100}  src="../../public/partners5.jpg" />
+            <Image width={250} height={100}  src="../../public/partners6.jpg" />
+            <Image width={250} height={100}  src="../../public/partners7.jpg" />
+            <Image width={250} height={100}  src="../../public/partners8.jpg" />
+            <Image width={250} height={100}  src="../../public/partners9.jpg" />
           </div>
         </div>
 
