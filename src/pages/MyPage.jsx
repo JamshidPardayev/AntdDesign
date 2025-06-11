@@ -136,7 +136,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg1.jpg"
+                        src={catalogImg1}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -157,7 +157,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg2.jpg"
+                        src={catalogImg2}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -178,7 +178,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg3.jpg"
+                        src={catalogImg3}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -199,7 +199,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg4.jpg"
+                        src={catalogImg4}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -220,7 +220,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg5.jpg"
+                        src={catalogImg5}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -241,7 +241,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg6.jpg"
+                        src={catalogImg6}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
@@ -262,7 +262,7 @@ const MyPage = () => {
                   <div className="text-white h-[400px] flex gap-10 border border-[#FFFFFF33] p-2 max-sm:flex-col">
                     <div className="w-[50%] max-sm:w-[100%] max-sm:h-[300px] h-[100%] rounded-[10px] overflow-hidden">
                       <img
-                        src="../../public/catalogImg7.jpg"
+                        src={catalogImg7}
                         alt="img1"
                         className="w-full h-full rounded-[10px] hover:scale-105 duration-300"
                       />
