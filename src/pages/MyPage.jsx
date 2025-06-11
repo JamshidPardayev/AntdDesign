@@ -7,7 +7,7 @@ import {
   TwitterOutlined,
   WhatsAppOutlined,
 } from "@ant-design/icons";
-import { Button, Carousel, Tabs } from "antd";
+import { Button, Carousel, Tabs, Image } from "antd";
 
 const contentStyle = {
   height: "80vh",
@@ -35,11 +35,28 @@ const MyPage = () => {
         <div className="max-w-[1200px] mx-auto px-3">
           <nav className="h-[100px] flex justify-between items-center">
             <img src="../../public/logo.svg" alt="logo" />
-            <ul className="flex gap-4 text-gray-300 text-[14px] max-md:hidden">
-              <li>УСЛУГИ</li>
-              <li>АКЦИИ</li>
-              <li>КОМПОЗИЦИИ</li>
-              <li>НАШИ ПАРТНЁРЫ</li>
+            <ul className="flex gap-4 text-[14px] max-md:hidden">
+              <a href="#services">
+                {" "}
+                <li className="hover:text-white text-gray-300  duration-300">
+                  УСЛУГИ
+                </li>
+              </a>
+              <a href="#offer">
+                <li className="hover:text-white text-gray-300  duration-300">
+                  АКЦИИ
+                </li>
+              </a>
+              <a href="#composition">
+                <li className="hover:text-white text-gray-300  duration-300">
+                  КОМПОЗИЦИИ
+                </li>
+              </a>
+              <a href="#partners">
+                <li className="hover:text-white text-gray-300  duration-300">
+                  НАШИ ПАРТНЁРЫ
+                </li>
+              </a>
             </ul>
             <p className="text-white text-[14px] max-md:hidden">
               +7 (916) 392 17 77
@@ -93,10 +110,10 @@ const MyPage = () => {
         </div>
       </Header>
       <div className="bg-[#3B181E] text-white py-[50px]">
-        <h2 className="text-[36px] text-center relative before:absolute before:bottom-0 before:duration-300 before:w-0 hover:before:w-[220px] before:h-[2px] before:bg-white before:mx-auto ">
-          Каталог услуг
-        </h2>
-        <div className="text-white max-w-[1200px] mx-auto px-3">
+        <div id="services" className="text-white max-w-[1200px] mx-auto px-3">
+          <h2 className="text-[30px] uppercase text-center relative before:absolute before:bottom-0 before:duration-300 before:w-0 hover:before:w-[220px] before:h-[2px] before:bg-white before:mx-auto mb-4">
+            Каталог услуг
+          </h2>
           <Tabs
             tabBarGutter={20}
             className=""
@@ -252,7 +269,105 @@ const MyPage = () => {
             ]}
           />
         </div>
-        <div className="Footer pt-10 px-3">
+        <div
+          id="offer"
+          className="max-w-[1200px] mx-auto px-3 flex gap-6 py-[70px] max-sm:flex-col max-sm:text-center"
+        >
+          <div>
+            <h2 className="text-[45px] tracking-[6px]">
+              Акционные предложения
+            </h2>
+            <hr className="w-[100px] my-6 max-sm:mx-auto" />
+            <p className="mb-6 text-[18px]">
+              При заказе свадебного предоставляется скидка на букет невесты и
+              бутоньерку в размере 30%
+            </p>
+            <Button ghost>смотреть работы</Button>
+          </div>
+          <div className="overflow-hidden">
+            <img
+              src="../../public/treeImg.jpg"
+              alt="img"
+              className="h-[350px] hover:scale-105 duration-300"
+            />
+          </div>
+        </div>
+
+        <div
+          id="composition"
+          className="max-w-[1200px] mx-auto px-3 flex gap-6 py-[70px] max-sm:flex-col max-sm:text-center"
+        >
+          <div className="w-[50%] max-sm:w-[100%] overflow-hidden">
+            <img
+              src="../../public/copmImg.jpg"
+              alt="img"
+              className="w-full h-full hover:scale-105 duration-300"
+            />
+          </div>
+          <div className="w-[50%] max-sm:w-[100%]">
+            <h2 className="text-[45px] tracking-[3px]">
+              композиции и шляпные коробки
+            </h2>
+            <hr className="w-[100px] my-6 max-sm:mx-auto" />
+            <p className="mb-6 text-[15px]">
+              Композиции могут собираться в любой таре: корзинке, шляпной
+              коробке, вазочке или декоративных ящиках. Их нет необходимости
+              ставить в вазу, как букеты, потому что цветы питаются при помощи
+              специальной флористической губки под названием оазис. Композиции
+              очень удобные для подарка, или оформления мероприятия.
+            </p>
+            <Button ghost>смотреть работы</Button>
+            <div className="flex gap-2 max-sm:justify-center mt-3">
+              <div className="overflow-hidden">
+                <img
+                  src="../../public/gruop1.jpg"
+                  alt="img"
+                  className="hover:scale-105 duration-300"
+                />
+              </div>
+              <div className="overflow-hidden">
+                <img
+                  src="../../public/gruop2.jpg"
+                  alt="img"
+                  className="hover:scale-105 duration-300"
+                />
+              </div>{" "}
+              <div className="overflow-hidden">
+                <img
+                  src="../../public/gruop3.jpg"
+                  alt="img"
+                  className="hover:scale-105 duration-300"
+                />
+              </div>{" "}
+              <div className="overflow-hidden">
+                <img
+                  src="../../public/gruop4.jpg"
+                  alt="img"
+                  className="hover:scale-105 duration-300"
+                />
+              </div>{" "}
+            </div>
+          </div>
+        </div>
+
+        <div id="partners">
+          <h2 className="text-[30px] uppercase text-center relative before:absolute before:bottom-0 before:duration-300 before:w-0 hover:before:w-[300px] before:h-[2px] before:bg-white before:mx-auto mb-4">
+            наши поставщики
+          </h2>
+          <div className="flex justify-center flex-wrap gap-5 my-10">
+            <Image width={250} height={100}  src="../../public/partners1.jpg" />
+            <Image width={250} height={100}  src="../../public/partners2.jpg" />
+            <Image width={250} height={100}  src="../../public/partners3.jpg" />
+            <Image width={250} height={100}  src="../../public/partners4.jpg" />
+            <Image width={250} height={100}  src="../../public/partners5.jpg" />
+            <Image width={250} height={100}  src="../../public/partners6.jpg" />
+            <Image width={250} height={100}  src="../../public/partners7.jpg" />
+            <Image width={250} height={100}  src="../../public/partners8.jpg" />
+            <Image width={250} height={100}  src="../../public/partners9.jpg" />
+          </div>
+        </div>
+
+        <div className="Footer max-w-[1200px] mx-auto  pt-10 px-3">
           <div className="flex text-[#FFFFFF80] flex-wrap gap-x-8 justify-center">
             <p>Cвадебная флористика</p>
             <p>Букеты на любые мероприятия</p>
