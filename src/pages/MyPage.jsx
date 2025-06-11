@@ -1,4 +1,12 @@
-import logo from '../assets/logo.svg';
+import logo from "../assets/logo.svg";
+import heroBack from "../assets/heroImg.jpg";
+import catalogImg1 from '../assets/catalogImg1.jpg';
+import catalogImg2 from '../assets/catalogImg2.jpg';
+import catalogImg3 from '../assets/catalogImg3.jpg';
+import catalogImg4 from '../assets/catalogImg4.jpg';
+import catalogImg5 from '../assets/catalogImg5.jpg';
+import catalogImg6 from '../assets/catalogImg6.jpg';
+import catalogImg7 from '../assets/catalogImg7.jpg';
 
 import { Footer, Header } from "antd/es/layout/layout";
 import React from "react";
@@ -27,7 +35,7 @@ const MyPage = () => {
     <div>
       <Header
         style={{
-          backgroundImage: 'url("../../public/heroImg.jpg")',
+          backgroundImage: `url(${heroBack})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           padding: "0 20px",
@@ -357,15 +365,15 @@ const MyPage = () => {
             наши поставщики
           </h2>
           <div className="flex justify-center flex-wrap gap-5 my-10">
-            <Image width={250} height={100}  src="../../public/partners1.jpg" />
-            <Image width={250} height={100}  src="../../public/partners2.jpg" />
-            <Image width={250} height={100}  src="../../public/partners3.jpg" />
-            <Image width={250} height={100}  src="../../public/partners4.jpg" />
-            <Image width={250} height={100}  src="../../public/partners5.jpg" />
-            <Image width={250} height={100}  src="../../public/partners6.jpg" />
-            <Image width={250} height={100}  src="../../public/partners7.jpg" />
-            <Image width={250} height={100}  src="../../public/partners8.jpg" />
-            <Image width={250} height={100}  src="../../public/partners9.jpg" />
+            <Image width={250} height={100} src="../../public/partners1.jpg" />
+            <Image width={250} height={100} src="../../public/partners2.jpg" />
+            <Image width={250} height={100} src="../../public/partners3.jpg" />
+            <Image width={250} height={100} src="../../public/partners4.jpg" />
+            <Image width={250} height={100} src="../../public/partners5.jpg" />
+            <Image width={250} height={100} src="../../public/partners6.jpg" />
+            <Image width={250} height={100} src="../../public/partners7.jpg" />
+            <Image width={250} height={100} src="../../public/partners8.jpg" />
+            <Image width={250} height={100} src="../../public/partners9.jpg" />
           </div>
         </div>
 
