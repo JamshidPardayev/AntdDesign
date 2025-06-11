@@ -1,3 +1,9 @@
+{
+  /* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */
+}
+{
+  /* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */
+}
 import {
   Anchor,
   Breadcrumb,
@@ -38,6 +44,14 @@ import {
   Statistic,
   Tag,
   Tour,
+  Alert,
+  Drawer,
+  message,
+  Modal,
+  Popconfirm,
+  Progress,
+  Skeleton,
+  Spin,
 } from "antd";
 import {
   ClockCircleOutlined,
@@ -152,9 +166,9 @@ const options1 = [
     ],
   },
 ];
-const onChange = (value) => {
-  console.log(value);
-};
+// const onChange = (value) => {
+//   console.log(value);
+// };
 
 const plainOptions = ["Apple", "Pear", "Orange"];
 
@@ -203,12 +217,49 @@ const content = (
     <p>Barcelona</p>
   </div>
 );
-// --------------------------------component start-----------------------
-// --------------------------------component start-----------------------
-// --------------------------------component start-----------------------
-// --------------------------------component start-----------------------
+const confirm = (e) => {
+  console.log(e);
+  message.success("Click on Yes");
+};
+const cancel = (e) => {
+  console.log(e);
+  message.error("Click on No");
+};
+const contentStyle3 = {
+  padding: 50,
+  background: "rgba(0, 0, 0, 0.05)",
+  borderRadius: 4,
+};
+const content3 = <div style={contentStyle3} />;
 
+{
+  /* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */
+}
+{
+  /* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */
+}
+// --------------------------------component start-----------------------
 const MyComponents = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+  const [messageApi, contextHolder] = message.useMessage();
+  const info = () => {
+    messageApi.info("Hello, Ant Design!");
+  };
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   const { Text, Link } = Typography;
   const [justify, setJustify] = React.useState(justifyOptions[0]);
   const [alignItems, setAlignItems] = React.useState(alignOptions[0]);
@@ -814,7 +865,118 @@ const MyComponents = () => {
         <Button ref={ref3} icon={<EllipsisOutlined />} />
       </Space>
       <Tour open={open} onClose={() => setOpen(false)} steps={steps} />
-      {/* --------------------- Carousel--------------------- */}
+      {/* --------------------- Alert--------------------- */}
+      <Alert message="Success Tips" type="success" showIcon />
+      <br />
+      <Alert message="Informational Notes" type="info" showIcon />
+      <br />
+      <Alert message="Warning" type="warning" showIcon closable />
+      <br />
+      <Alert message="Error" type="error" showIcon />
+      <br />
+      <Alert
+        message="Success Tips"
+        description="Detailed description and advice about successful copywriting."
+        type="success"
+        showIcon
+      />
+      <br />
+      <Alert
+        message="Informational Notes"
+        description="Additional description and information about copywriting."
+        type="info"
+        showIcon
+      />
+      <br />
+      <Alert
+        message="Warning"
+        description="This is a warning notice about copywriting."
+        type="warning"
+        showIcon
+        closable
+      />
+      <br />
+      <Alert
+        message="Error"
+        description="This is an error message about copywriting."
+        type="error"
+        showIcon
+      />
+      {/* --------------------- Drawer--------------------- */}
+      <Button type="primary" onClick={showDrawer}>
+        Open
+      </Button>
+      <Drawer
+        title="Basic Drawer"
+        closable={{ "aria-label": "Close Button" }}
+        onClose={onClose}
+        open={open}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Drawer>
+      {/* --------------------- Message--------------------- */}
+      {contextHolder}
+      <Button type="primary" onClick={info}>
+        Display normal message
+      </Button>
+      {/* --------------------- Modal--------------------- */}
+      <Button type="primary" onClick={showModal}>
+        Open Modal
+      </Button>
+      <Modal
+        title="Basic Modal"
+        closable={{ "aria-label": "Custom Close Button" }}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Are You Sure Delete This?</p>
+      </Modal>
+      {/* --------------------- Popconfirm--------------------- */}
+      <Popconfirm
+        title="Delete the task"
+        description="Are you sure to delete this task?"
+        onConfirm={confirm}
+        onCancel={cancel}
+        okText="Yes"
+        cancelText="No"
+      >
+        <Button danger>Delete</Button>
+      </Popconfirm>
+      {/* --------------------- Progress--------------------- */}
+      <Flex gap="small" vertical>
+        <Progress percent={30} />
+        <Progress percent={50} status="active" />
+        <Progress percent={70} status="exception" />
+        <Progress percent={100} />
+        <Progress percent={50} showInfo={false} />
+      </Flex>
+      {/* --------------------- Skeleton--------------------- */}
+      <h2 className="text-[20px]">Skeleton</h2>
+      <Skeleton active />
+      {/* --------------------- Spin--------------------- */}
+      <Flex gap="middle" vertical>
+        <Flex gap="middle">
+          <Spin tip="Loading" size="small">
+            {content3}
+          </Spin>
+          <Spin tip="Loading">{content3}</Spin>
+          <Spin tip="Loading" size="large">
+            {content3}
+          </Spin>
+        </Flex>
+        <Spin tip="Loading...">
+          <Alert
+            message="Alert message title"
+            description="Further details about the context of this alert."
+            type="info"
+          />
+        </Spin>
+      </Flex>
+      {/* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */}
+      {/* ================================== Qaytarilgan yoki uxshash Componentlarni qilmadim va Uzgaruvchisi bir xil bolgan Componentlar ham Izohga olingan ishlamasa ushandan bolishi mumkin a tak uzimda hammasi ishlagan ================================== */}
     </div>
   );
 };
